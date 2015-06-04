@@ -33,7 +33,7 @@ class MyExtractor implements GeoIO\Extractor
 }
 
 $extractor = MyExtractor();
-$generator = new GeoIO\WKB\Generator($extractor, array(
+$generator = new GeoIO\WKB\Generator\Generator($extractor, array(
     'hex' => true
 ));
 
