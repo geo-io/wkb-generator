@@ -56,4 +56,4 @@ composer require geo-io/wkb-generator
 License
 -------
 
-Geo I/O WKB Generator is released under the [MIT License](LICENSE).
+Copyright (c) 2014-2022 Jan Sorgalla. Released under the [MIT License](LICENSE).
