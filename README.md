@@ -1,7 +1,7 @@
 Geo I/O WKB Generator
 =====================
 
-[![Build Status](https://travis-ci.org/geo-io/wkb-generator.svg?branch=master)](https://travis-ci.org/geo-io/wkb-generator)
+[![Build Status](https://github.com/geo-io/wkb-generator/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/geo-io/wkb-generator/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/geo-io/wkb-generator/badge.svg?branch=master)](https://coveralls.io/github/geo-io/wkb-generator?branch=master)
 
 Generates [Well-known binary (WKB)](http://en.wikipedia.org/wiki/Well-known_text#Well-known_binary)
