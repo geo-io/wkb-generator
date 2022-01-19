@@ -1,39 +1,41 @@
 <?php
 
+declare(strict_types=1);
+
 namespace GeoIO\WKB\Generator;
 
-class Packer
+final class Packer
 {
-    private $littleEndian;
+    private bool $littleEndian;
 
-    public function __construct($littleEndian)
+    public function __construct(bool $littleEndian)
     {
-        $this->littleEndian = (bool) $littleEndian;
+        $this->littleEndian = $littleEndian;
     }
 
-    public function endian()
+    public function endian(): string
     {
         return $this->byte($this->littleEndian ? 1 : 0);
     }
 
-    public function byte($value)
+    public function byte(int $value): string
     {
         return pack('c', $value);
     }
 
-    public function integer($value)
+    public function integer(int $value): string
     {
         return pack($this->littleEndian ? 'V' : 'N', $value);
     }
 
-    public function double($value)
+    public function double(float $value): string
     {
-        $value = pack('d', $value);
+        $data = pack('d', $value);
 
         if (!$this->littleEndian) {
-            $value = strrev($value);
+            $data = strrev($data);
         }
 
-        return $value;
+        return $data;
     }
 }
