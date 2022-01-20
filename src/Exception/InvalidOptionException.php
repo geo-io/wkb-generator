@@ -18,8 +18,8 @@ final class InvalidOptionException extends InvalidArgumentException implements E
                 'Invalid value for option %s passed: %s (Expected %s)',
                 $name,
                 json_encode($value, JSON_THROW_ON_ERROR),
-                implode(', ', array_map('json_encode', $expected))
-            )
+                implode(', ', array_map('json_encode', $expected)),
+            ),
         );
     }
 }

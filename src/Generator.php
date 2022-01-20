@@ -59,7 +59,7 @@ final class Generator
                         self::FORMAT_WKB11,
                         self::FORMAT_WKB12,
                         self::FORMAT_EWKB,
-                    ]
+                    ],
                 ),
             };
         }
@@ -84,7 +84,7 @@ final class Generator
         try {
             $data = $this->generateGeometry(
                 $this->extractor->extractDimension($geometry),
-                $geometry
+                $geometry,
             );
 
             if (!$this->options['hex']) {
@@ -107,7 +107,7 @@ final class Generator
             $this->extractor->extractType($geometry),
             $dimension,
             $geometry,
-            true
+            true,
         );
     }
 

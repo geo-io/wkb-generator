@@ -23,7 +23,7 @@ class GeneratorTest extends TestCase
         $extractor = $this->getPointExtractorMock(
             $point,
             Dimension::DIMENSION_2D,
-            $this->coords(1, 2)
+            $this->coords(1, 2),
         );
 
         $generator = new Generator($extractor, [
@@ -40,7 +40,7 @@ class GeneratorTest extends TestCase
         $extractor = $this->getPointExtractorMock(
             $point,
             Dimension::DIMENSION_2D,
-            $this->coords(1, 2)
+            $this->coords(1, 2),
         );
 
         $generator = new Generator($extractor, [
@@ -57,7 +57,7 @@ class GeneratorTest extends TestCase
         $extractor = $this->getPointExtractorMock(
             $point,
             Dimension::DIMENSION_2D,
-            $this->coords(1, 2)
+            $this->coords(1, 2),
         );
 
         $generator = new Generator($extractor, [
@@ -74,7 +74,7 @@ class GeneratorTest extends TestCase
         $extractor = $this->getPointExtractorMock(
             $point,
             Dimension::DIMENSION_2D,
-            $this->coords(1, 2)
+            $this->coords(1, 2),
         );
 
         $generator = new Generator($extractor, [
@@ -93,7 +93,7 @@ class GeneratorTest extends TestCase
             $point,
             Dimension::DIMENSION_2D,
             $this->coords(1, 2),
-            1000
+            1000,
         );
 
         $generator = new Generator($extractor, [
@@ -112,7 +112,7 @@ class GeneratorTest extends TestCase
         $extractor = $this->getPointExtractorMock(
             $point,
             Dimension::DIMENSION_3DZ,
-            $this->coords(1, 2, 3)
+            $this->coords(1, 2, 3),
         );
 
         $generator = new Generator($extractor, [
@@ -130,7 +130,7 @@ class GeneratorTest extends TestCase
         $extractor = $this->getPointExtractorMock(
             $point,
             Dimension::DIMENSION_3DM,
-            $this->coords(1, 2, null, 3)
+            $this->coords(1, 2, null, 3),
         );
 
         $generator = new Generator($extractor, [
@@ -148,7 +148,7 @@ class GeneratorTest extends TestCase
         $extractor = $this->getPointExtractorMock(
             $point,
             Dimension::DIMENSION_4D,
-            $this->coords(1, 2, 3, 4)
+            $this->coords(1, 2, 3, 4),
         );
 
         $generator = new Generator($extractor, [
@@ -166,7 +166,7 @@ class GeneratorTest extends TestCase
         $extractor = $this->getPointExtractorMock(
             $point,
             Dimension::DIMENSION_2D,
-            $this->coords(1, 2)
+            $this->coords(1, 2),
         );
 
         $generator = new Generator($extractor, [
@@ -184,7 +184,7 @@ class GeneratorTest extends TestCase
         $extractor = $this->getPointExtractorMock(
             $point,
             Dimension::DIMENSION_3DZ,
-            $this->coords(1, 2, 3)
+            $this->coords(1, 2, 3),
         );
 
         $generator = new Generator($extractor, [
@@ -202,7 +202,7 @@ class GeneratorTest extends TestCase
         $extractor = $this->getPointExtractorMock(
             $point,
             Dimension::DIMENSION_3DM,
-            $this->coords(1, 2, null, 3)
+            $this->coords(1, 2, null, 3),
         );
 
         $generator = new Generator($extractor, [
@@ -220,7 +220,7 @@ class GeneratorTest extends TestCase
         $extractor = $this->getPointExtractorMock(
             $point,
             Dimension::DIMENSION_4D,
-            $this->coords(1, 2, 3, 4)
+            $this->coords(1, 2, 3, 4),
         );
 
         $generator = new Generator($extractor, [
@@ -830,7 +830,7 @@ class GeneratorTest extends TestCase
             ->willReturnOnConsecutiveCalls(
                 [$lineString1, $lineString2],
                 [],
-                [$lineString3]
+                [$lineString3],
             )
         ;
 
@@ -1018,7 +1018,7 @@ class GeneratorTest extends TestCase
         object $point,
         Dimension $dimension,
         Coordinates $coords,
-        int $srid = null
+        int $srid = null,
     ): Extractor {
         $extractor = $this->createMock(Extractor::class);
 
